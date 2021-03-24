@@ -77,16 +77,17 @@ function Journals() {
                             placeholder="add place (required)"
                         />
                         <Input
+                            onChange={handleInputChange}
                             type="date"
-                            name="travelDate"
+                            name="date"
                         />
                         <TextArea
                             onChange={handleInputChange}
                             name="placeDetail"
-                            placeholder="Tell us about this place (Optional)"
+                            placeholder="Tell us about this place (required)"
                         />
                         <FormBtn
-                            disabled={!(formObject.place && formObject.date)}
+                            disabled={!(formObject.place && formObject.date && formObject.placeDetail)}
                             onClick={handleFormSubmit}
                         >
                             Submit Journal
